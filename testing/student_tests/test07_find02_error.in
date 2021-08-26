@@ -1,0 +1,6 @@
+I error.inc
+I commit02.inc
+
+> find balabala
+${NOT_FOUND}
+<<<*

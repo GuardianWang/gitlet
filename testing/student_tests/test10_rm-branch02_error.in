@@ -1,0 +1,12 @@
+I error.inc
+I branch01.inc
+
+# a branch with the given name does not exist
+> rm-branch new2
+${BRANCH_NOT_EXIST}
+<<<*
+
+# try to remove the branch you are currently on
+> rm-branch master
+${RM_CUR_BRANCH}
+<<<*

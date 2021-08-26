@@ -1,0 +1,50 @@
+I error.inc
+I definitions.inc
+I checkout-branch.inc
+I commit_id.inc
+
+> checkout -- a.txt
+${NO_FILE}
+<<<*
+
+> checkout abcdefg -- wug.txt
+${NO_COMMIT}
+<<<*
+
+> checkout ${COMMIT_ID} -- a.txt
+${NO_FILE}
+<<<*
+
+> checkout new2
+${NO_BRANCH}
+<<<*
+
+> checkout master
+${CUR_BRANCH}
+<<<*
+
+# overwrite untracked file
++ wug.txt notwug.txt
+> checkout new
+${DANGER}
+<<<*
+# check before doing anything else
+= wug.txt notwug.txt
+= dir1/wug.txt wug.txt
+= dir2/wug.txt wug.txt
+* dir2/notwug.txt
+= dir3/wug.txt wug.txt
++ wug.txt wug.txt
+
+# delete untracked file
++ dir2/wug.txt notwug.txt
+> checkout new
+${DANGER}
+<<<*
+# check before doing anything else
+= wug.txt wug.txt
+= dir1/wug.txt wug.txt
+= dir2/wug.txt notwug.txt
+* dir2/notwug.txt
+= dir3/wug.txt wug.txt
++ dir2/wug.txt wug.txt

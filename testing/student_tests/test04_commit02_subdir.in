@@ -1,0 +1,22 @@
+I init_files.inc
+
+# commit parent directory files
+C dir1
+> add ../wug.txt
+<<<
+> commit "added wug.txt"
+<<<
+
+# commit in sub-directory
+C dir1
+> add wug.txt
+<<<
+> commit "added dir1/wug.txt"
+<<<
+
+# commit sub-directory files
+C .
+> add dir2/wug.txt
+<<<
+> commit "added dir2/wug.txt"
+<<<

@@ -1,0 +1,22 @@
+I definitions.inc
+I checkout-branch.inc
+
+> checkout new
+<<<
+> log
+===
+${COMMIT_HEAD}
+new add dir2/notwug.txt
+
+===
+${COMMIT_HEAD}
+new add dir1/wug.txt
+
+===
+${COMMIT_HEAD}
+master add wug.txt
+
+===
+${COMMIT_HEAD}
+initial commit
+<<<*

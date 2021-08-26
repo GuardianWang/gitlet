@@ -1,0 +1,17 @@
+I error.inc
+I commit01.inc
+
+# add a file that is in last commit
+
+# change the file
++ wug.txt notwug.txt
+> add wug.txt
+<<<
+# change the file back to the committed version
++ wug.txt wug.txt
+> add wug.txt
+<<<
+# staging area should be empty
+> commit "added wug.txt"
+${EMPTY_COMMIT}
+<<<*

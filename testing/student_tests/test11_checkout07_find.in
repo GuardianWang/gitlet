@@ -1,0 +1,17 @@
+I definitions.inc
+I checkout-branch.inc
+
+> find new
+${ARBLINE}
+${ARBLINE}
+<<<*
+
+> find master
+${ARBLINE}
+${ARBLINE}
+${ARBLINE}
+<<<*
+
+> find notwug.txt
+${ARBLINE}
+<<<*

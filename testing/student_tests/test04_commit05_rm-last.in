@@ -1,0 +1,9 @@
+I error.inc
+I commit01.inc
+
+# rm a file that is in last commit
+> rm wug.txt
+<<<
+*wug.txt
+> commit "rm wug.txt"
+<<<

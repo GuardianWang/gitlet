@@ -1,0 +1,21 @@
+I init.inc
+
+# add sub-directory
++ wug.txt wug.txt
+C dir1
++ wug.txt wug.txt
+C dir2
++ wug.txt wug.txt
+
+# add in sub-directory
+> add wug.txt
+<<<
+
+# add parent directory
+> add ../wug.txt
+<<<
+
+C .
+# add sub-directory
+> add dir1/wug.txt
+<<<

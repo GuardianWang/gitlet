@@ -1,0 +1,22 @@
+I init_files.inc
+
+> add wug.txt
+<<<
+> add dir1/wug.txt
+<<<
+> add dir2/wug.txt
+<<<
+
+C dir1
+> rm wug.txt
+<<<
+> rm ../wug.txt
+<<<
+C .
+> rm dir2/wug.txt
+<<<
+
+C .
+* wug.txt
+* dir1/wug.txt
+* dir2/wug.txt

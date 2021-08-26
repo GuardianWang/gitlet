@@ -1,0 +1,7 @@
+I error.inc
+I init.inc
+
+# file doesn't exist
+> add wug.txt
+${ADD_NOFILE_ERROR}
+<<<*

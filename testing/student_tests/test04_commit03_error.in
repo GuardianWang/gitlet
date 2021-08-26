@@ -1,0 +1,14 @@
+I error.inc
+I init_files.inc
+
+# empty commit
+> commit "added wug.txt"
+${EMPTY_COMMIT}
+<<<*
+
+# empty commit message
+> add wug.txt
+<<<
+> commit ""
+${EMPTY_MSG}
+<<<*

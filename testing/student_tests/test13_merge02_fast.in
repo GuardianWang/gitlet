@@ -1,0 +1,36 @@
+I error.inc
+I definitions.inc
+I merge_prep.inc
+
+> checkout split
+<<<
+> merge master
+${FAST}
+<<<*
+
+> log
+===
+${COMMIT_HEAD}
+master
+
+===
+${COMMIT_HEAD}
+split point
+
+===
+${COMMIT_HEAD}
+initial commit
+<<<*
+
+> status
+=== Branches ===
+init
+master
+new
+\*split
+
+${ARBLINES}
+<<<*
+
+# equivalent to master
+I check_merge_master_no-conflict.inc

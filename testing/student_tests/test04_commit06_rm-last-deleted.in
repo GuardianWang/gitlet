@@ -1,0 +1,8 @@
+I commit01.inc
+
+# rm a file that is in last commit but deleted in the directory
+- wug.txt
+> rm wug.txt
+<<<
+> commit "rm wug.txt"
+<<<

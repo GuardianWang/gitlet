@@ -1,0 +1,40 @@
+I definitions.inc
+I commit02.inc
+
+# Tracked in the current commit, changed in the working directory, but not staged.
++ wug.txt notwug.txt
+
+# Staged for addition, but with different contents than in the working directory.
++ wug2.txt wug.txt
+> add wug2.txt
+<<<
++ wug2.txt notwug.txt
+
+# Staged for addition, but deleted in the working directory.
++ wug3.txt wug.txt
+> add wug3.txt
+<<<
+- wug3.txt
+
+# Not staged for removal, but tracked in the current commit and deleted from the working directory.
+- dir1/wug.txt
+
+> status
+=== Branches ===
+\*master
+
+=== Staged Files ===
+wug2.txt
+wug3.txt
+
+=== Removed Files ===
+
+=== Modifications Not Staged For Commit ===
+dir1${SEP}wug.txt ${DEL}
+wug.txt ${MD}
+wug2.txt ${MD}
+wug3.txt ${DEL}
+
+=== Untracked Files ===
+
+<<<*

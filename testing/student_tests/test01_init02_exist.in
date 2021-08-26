@@ -1,0 +1,7 @@
+I error.inc
+I init.inc
+
+# initialize when .gitlet exists
+> init
+${GITLET_EXIST_ERROR}
+<<<*

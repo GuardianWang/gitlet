@@ -1,0 +1,13 @@
+I definitions.inc
+I checkout-branch.inc
+
+> checkout new
+<<<
+
+> status
+=== Branches ===
+master
+\*new
+
+${ARBLINES}
+<<<*

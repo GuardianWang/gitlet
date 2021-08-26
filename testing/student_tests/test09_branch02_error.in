@@ -1,0 +1,11 @@
+I error.inc
+I branch01.inc
+
+# branch name exists
+
+> branch master
+${BRANCH_EXIST}
+<<<*
+> branch new
+${BRANCH_EXIST}
+<<<*

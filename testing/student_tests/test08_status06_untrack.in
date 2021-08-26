@@ -1,0 +1,27 @@
+I definitions.inc
+I commit02.inc
+
+# neither staged for addition nor tracked
++ wug2.txt wug.txt
+
+# files that have been staged for removal, but then re-created without Gitlet’s knowledge
+> rm wug.txt
+<<<
++ wug.txt wug.txt
+
+> status
+=== Branches ===
+\*master
+
+=== Staged Files ===
+
+=== Removed Files ===
+wug.txt
+
+=== Modifications Not Staged For Commit ===
+
+=== Untracked Files ===
+wug.txt
+wug2.txt
+
+<<<*

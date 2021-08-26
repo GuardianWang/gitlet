@@ -1,3 +1,12 @@
+.gitlet
+.idea
+.gradle
+target
+try.txt
+otherdir
+samples
+gitlet-design.md
+
 # Compiled class file
 *.class
 

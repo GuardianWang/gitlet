@@ -1,0 +1,17 @@
+I definitions.inc
+I commit02.inc
+
+> find wug.txt
+${ARBLINE}
+${ARBLINE}
+${ARBLINE}
+<<<*
+
+> find dir
+${ARBLINE}
+${ARBLINE}
+<<<*
+
+> find initial
+${ARBLINE}
+<<<*

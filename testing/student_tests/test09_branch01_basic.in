@@ -1,0 +1,10 @@
+I definitions.inc
+I branch01.inc
+
+> status
+=== Branches ===
+\*master
+new
+
+${ARBLINES}
+<<<*

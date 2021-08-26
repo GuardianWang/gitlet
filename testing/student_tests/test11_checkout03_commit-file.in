@@ -1,0 +1,25 @@
+I error.inc
+I definitions.inc
+I checkout-branch.inc
+I commit_id.inc
+
+> checkout new
+<<<
+
+# checkout sub-directory files
+> checkout ${COMMIT_ID} -- dir1/wug.txt
+<<<
+= dir1/wug.txt wug.txt
+
+# checkout in sub-directory
+C dir2
+> checkout ${COMMIT_ID} -- wug.txt
+<<<
+C .
+= dir2/wug.txt wug.txt
+= dir2/notwug.txt notwug.txt
+
+# not staged
+> commit "add wug.txt"
+${EMPTY_COMMIT}
+<<<*

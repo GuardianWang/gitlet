@@ -1,0 +1,35 @@
+I error.inc
+I commit01.inc
+
+# add and then rm equals an empty commit
+> add dir1/wug.txt
+<<<
+> rm dir1/wug.txt
+<<<
+> commit "empty commit"
+${EMPTY_COMMIT}
+<<<*
+
+# operate from different directories
+I create_files.inc
+C dir1
+> add wug.txt
+<<<
+C dir2
+> rm ../dir1/wug.txt
+<<<
+> commit "empty commit"
+${EMPTY_COMMIT}
+<<<*
+
+# operate from different directories
+I create_files.inc
+C dir2
+> add ../dir1/wug.txt
+<<<
+C dir1
+> rm wug.txt
+<<<
+> commit "empty commit"
+${EMPTY_COMMIT}
+<<<*

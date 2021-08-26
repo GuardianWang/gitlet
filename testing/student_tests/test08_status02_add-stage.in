@@ -1,0 +1,28 @@
+I definitions.inc
+I commit02.inc
+
+# staged for addition
+C dir3
++ wug.txt wug.txt
+> add wug.txt
+<<<
+C .
++ wug2.txt wug.txt
+> add wug2.txt
+<<<
+
+> status
+=== Branches ===
+\*master
+
+=== Staged Files ===
+dir3${SEP}wug.txt
+wug2.txt
+
+=== Removed Files ===
+
+=== Modifications Not Staged For Commit ===
+
+=== Untracked Files ===
+
+<<<*

@@ -1,0 +1,12 @@
+I error.inc
+I commit01.inc
+
++ wug.txt notwug.txt
+> checkout -- wug.txt
+<<<
+= wug.txt wug.txt
+
+# not staged
+> commit "add wug.txt"
+${EMPTY_COMMIT}
+<<<*

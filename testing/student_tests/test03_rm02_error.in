@@ -1,0 +1,14 @@
+I init.inc
+I error.inc
+
+# rm no such a file
+> rm wug.txt
+${RM_ERROR}
+<<<*
+
+# rm when not added for stage
++ wug.txt wug.txt
+> rm wug.txt
+${RM_ERROR}
+<<<*
+E wug.txt

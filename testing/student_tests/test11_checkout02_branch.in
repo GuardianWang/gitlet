@@ -1,0 +1,21 @@
+I error.inc
+I checkout-branch.inc
+
+= wug.txt wug.txt
+= dir1/wug.txt wug.txt
+= dir2/wug.txt wug.txt
+* dir2/notwug.txt
+= dir3/wug.txt wug.txt
+
+> checkout new
+<<<
+= wug.txt wug.txt
+= dir1/wug.txt notwug.txt
+= dir2/notwug.txt notwug.txt
+* dir2/wug.txt
+= dir3/wug.txt wug.txt
+
+# the staging area is cleared
+> commit "try to commit"
+${EMPTY_COMMIT}
+<<<*

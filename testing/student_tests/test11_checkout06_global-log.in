@@ -1,0 +1,11 @@
+I definitions.inc
+I checkout-branch.inc
+
+> global-log
+${COMMIT_LOG}
+${COMMIT_LOG}
+${COMMIT_LOG}
+${COMMIT_LOG}
+${COMMIT_LOG}
+${COMMIT_LOG}
+<<<*

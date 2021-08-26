@@ -1,0 +1,33 @@
+I error.inc
+I checkout-branch.inc
+I commit_ids.inc
+
+> reset abcedfg01234
+${NO_COMMIT}
+<<<*
+
+# overwrite untracked file
++ wug.txt notwug.txt
+> reset ${NEW_HEAD_1}
+${DANGER}
+<<<*
+# check before doing anything else
+= wug.txt notwug.txt
+= dir1/wug.txt wug.txt
+= dir2/wug.txt wug.txt
+* dir2/notwug.txt
+= dir3/wug.txt wug.txt
++ wug.txt wug.txt
+
+# delete untracked file
++ dir2/wug.txt notwug.txt
+> reset ${NEW_HEAD_1}
+${DANGER}
+<<<*
+# check before doing anything else
+= wug.txt wug.txt
+= dir1/wug.txt wug.txt
+= dir2/wug.txt notwug.txt
+* dir2/notwug.txt
+= dir3/wug.txt wug.txt
++ dir2/wug.txt wug.txt

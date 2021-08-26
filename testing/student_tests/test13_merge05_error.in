@@ -1,0 +1,37 @@
+I error.inc
+I merge_prep_conflict.inc
+
++ wug4.txt wug.txt
+> add wug4.txt
+<<<
+> merge new
+${UNCOMMITTED}
+<<<*
+
+> rm wug4.txt
+<<<
+> rm notwug.txt
+<<<
+> merge new
+${UNCOMMITTED}
+<<<*
+
+# empty stage
++ notwug.txt notwug.txt
+> add notwug.txt
+<<<
+
+> commit "empty"
+${EMPTY_COMMIT}
+<<<*
+
+> merge nothing
+${BRANCH_NOT_EXIST}
+<<<*
+
+> merge master
+${SELF}
+<<<*
+
+I check_merge_master_conflict.inc
+I head_msg_master.inc

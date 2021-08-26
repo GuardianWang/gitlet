@@ -1,0 +1,34 @@
+I error.inc
+I definitions.inc
+I merge_prep.inc
+
+> merge split
+${ANCESTOR}
+<<<*
+
+> log
+===
+${COMMIT_HEAD}
+master
+
+===
+${COMMIT_HEAD}
+split point
+
+===
+${COMMIT_HEAD}
+initial commit
+<<<*
+
+> status
+=== Branches ===
+init
+\*master
+new
+split
+
+${ARBLINES}
+<<<*
+
+# do nothing
+I check_merge_master_no-conflict.inc

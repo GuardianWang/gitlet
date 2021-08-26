@@ -1,0 +1,9 @@
+I definitions.inc
+I commit02.inc
+
+> global-log
+${COMMIT_LOG}
+${COMMIT_LOG}
+${COMMIT_LOG}
+${COMMIT_LOG}
+<<<*

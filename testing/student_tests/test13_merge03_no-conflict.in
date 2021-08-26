@@ -1,0 +1,43 @@
+I definitions.inc
+I merge_prep.inc
+
++ wug3.txt wug.txt
+> merge new
+<<<
+
+> log
+===
+${COMMIT_HEAD}
+Merged new into master.
+
+===
+${COMMIT_HEAD}
+master
+
+===
+${COMMIT_HEAD}
+split point
+
+===
+${COMMIT_HEAD}
+initial commit
+<<<*
+
+> status
+=== Branches ===
+init
+\*master
+new
+split
+
+${ARBLINES}
+<<<*
+
+# make sure add stage and rm stage have proper files
+> checkout init
+<<<
+> checkout master
+<<<
+
+I merge_no-conflict_result.inc
+= wug3.txt wug.txt
